@@ -5,19 +5,13 @@ import datetime as dt
 
 def eda(dataframe):
     """
-    Straight ganked from @ritikabhasker - https://github.com/ritikabhasker/Intro-to-EDA
-    
-    - 10/8/2017
-        - Updated to python3
-    - 10/10/2017
-        - Reformatted output, updated the describe to include unique values @DaleWahl
-        - Dropped, but @DaleWahl is still cool
-    - 10/11/2017
-        - Added feature plotting, and switched up the output format
-        - Added assert, type coercion coming soon
-    
+
+    :param dataframe: Data to run data analysis on
+    :type dataframe: pandas DataFrame
+    :return: None
+    :rtype: None
     """
-    assert type(dataframe) is pd.DataFrame, "Expected pandas.DataFrame, {} is type {}".format(dataframe, type(dataframe))
+    assert type(dataframe) in [pd.DataFrame, pd.Series], "Expected pandas.DataFrame, {} is type {}".format(dataframe, type(dataframe))
     
     print("Dataframe Index:\n{}\n".format(dataframe.index))
     print("Dataframe Shape:\n{}\n".format(dataframe.shape))   
