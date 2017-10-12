@@ -1,4 +1,4 @@
-# dataxplor
+# xplor
 Python package to perform exploratory data analysis
 
 Credit is owed to @ritikabhasker, whose [Intro to EDA](https://github.com/ritikabhasker/Intro-to-EDA) provided the inspiration, and the foundation for this effort.
