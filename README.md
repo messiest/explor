@@ -1,7 +1,7 @@
 # xplor
 Python package to perform exploratory data analysis
 
-All credit is due to @ritikabhasker, whose [Intro to EDA](https://github.com/ritikabhasker/Intro-to-EDA) provided the inspiration, and the foundation for this effort.
+A ton of credit is due to @ritikabhasker, whose [Intro to EDA](https://github.com/ritikabhasker/Intro-to-EDA) lecture  provided the inspiration, and the foundation for this effort.
 
 Change Log:
 - 10/8/2017
@@ -27,6 +27,8 @@ If you are using macOS:
 python3.6 setup.py bdist_egg
 ```
 
+    Note: The version number for python might differ for your system
+
 For Windows:
 ```commandline
 python setup.py bdist_egg
@@ -35,7 +37,7 @@ python setup.py bdist_egg
 After building this you will need to install locally:
 
 ```commandline
-easy_install dist/xplor-x-py3.6.egg
+easy_install dist/xplor-0.1-py3.6.egg
 ```
 
 
