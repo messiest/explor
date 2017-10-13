@@ -27,7 +27,7 @@ If you are using macOS:
 python3.6 setup.py bdist_egg
 ```
 
-    Note: The version number for python might differ for your system
+_Note: The version number for python might differ for your system_
 
 For Windows:
 ```commandline
@@ -41,7 +41,7 @@ easy_install dist/xplor-0.1-py3.6.egg
 ```
 
 
-To test this, open python3 in either Terminal or Command Prompt, and try importing mTree with:
+To test this, open python3 in either Terminal or Command Prompt, and try importing `xplor` with:
 
 ```python
 import xplor
