@@ -33,4 +33,4 @@ import xplor
 ```
 
 If there are no error messages, the build was successful.
-You can now access mTree as you would any other python package.
+You can now access `xplor` as you would any other python package.
