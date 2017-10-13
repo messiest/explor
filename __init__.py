@@ -1,1 +1,1 @@
-from xplor import eda
+from xplor import EDA
