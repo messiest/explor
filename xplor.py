@@ -23,7 +23,6 @@ class EDA:
         if type(self.data) == pd.DataFrame:
             self.analyze_df(self.data, plot)
         elif type(self.data) == pd.Series:
-            print("This is a pandas Series!")
             self.analyze_series(self.data, plot)
         else:
             "Type {} is currently unsupported.\n\nPlease post support requests on GitHub.\nBest,\n- @messiest"
@@ -34,7 +33,7 @@ class EDA:
 
         :param df: Data to run data analysis on
         :type df: pandas DataFrame
-        :return: Nonee
+        :return: None
         :rtype: None
         """
         assert type(df) is pd.Series, "Expected pandas.Series, {} is type {}".format(df, type(df))
@@ -51,7 +50,6 @@ class EDA:
 
         if df.nunique() == df.count():  # skip plotting when all values are unique
             print("\nIndex eligible - All values of {} are unique\n".format(df.name))
-            return
 
         # plotting
         if not plot:
@@ -59,8 +57,10 @@ class EDA:
         else:
             if df.dtype in [np.int64, np.float64]:
                 sns.distplot(df)
+                plt.title(df.name)
             elif df.dtype in [np.object, datetime.datetime]:
                 sns.countplot(df)
+                plt.title(df.name)
             plt.show()
 
     def analyze_df(self, df, plot=False):
@@ -97,6 +97,8 @@ class EDA:
             else:
                 if df[item].dtype in [np.int64, np.float64]:
                     sns.distplot(df[item])
+                    plt.title(item)
                 elif df[item].dtype in [np.object, datetime.datetime]:
                     sns.countplot(df[item])
+                    plt.title(item)
                 plt.show()
