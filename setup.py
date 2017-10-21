@@ -11,7 +11,7 @@ reqs_file = os.path.join(BASE_DIR, 'requirements.txt')
 install_reqs = parse_requirements(reqs_file, session=uuid.uuid1())
 
 setup(
-    name="xplor",
+    name="explor",
     version="0.1",
     author="Christopher Messier",
     author_email="messiercr@gmail.com",

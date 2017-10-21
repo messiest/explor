@@ -102,3 +102,16 @@ class EDA:
                     sns.countplot(df[item])
                     plt.title(item)
                 plt.show()
+
+    def corr_plot(self, adv=False):
+        assert type(self.data) is pd.DataFrame, "Data must be a pandas DataFrame to plot correlations"
+        g = sns.PairGrid(self.data)
+        g = g.map_diag(sns.kdeplot, shade=True, lw=3, legend=True)
+        if adv:
+            g = g.map_upper(sns.regplot, line_kws=dict(color="r"))
+            g = g.map_lower(sns.kdeplot, cmap="Blues_d")
+        else:
+            g = g.map_offdiag(sns.regplot,
+                              scatter_kws=dict(),
+                              line_kws=dict(color='b'))
+        plt.show()
