@@ -108,8 +108,12 @@ class EDA:
         g = sns.PairGrid(self.data)
         g = g.map_diag(sns.kdeplot, shade=True, lw=3, legend=True)
         if adv:
-            g = g.map_upper(sns.regplot, line_kws=dict(color="r"))
-            g = g.map_lower(sns.kdeplot, cmap="Blues_d")
+            g = g.map_upper(sns.regplot,
+                            scatter_kws=dict(),
+                            line_kws=dict(color='b'))
+            g = g.map_lower(sns.kdeplot,
+                            cmap='Blues_d',
+                            color='b')
         else:
             g = g.map_offdiag(sns.regplot,
                               scatter_kws=dict(),
